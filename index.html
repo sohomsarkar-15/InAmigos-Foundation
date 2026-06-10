@@ -1,0 +1,533 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InAmigos Foundation | Creating Impact Together</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fb;
+color:#333;
+overflow-x:hidden;
+}
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(13,110,253,0.95);
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#ffd166;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:800px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:#ffd166;
+color:#000;
+font-weight:600;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+section{
+padding:90px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+color:#0d6efd;
+margin-bottom:50px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat-card{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.stat-card h2{
+color:#0d6efd;
+font-size:2.5rem;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+}
+
+.project h3{
+margin-bottom:10px;
+color:#0d6efd;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.timeline{
+border-left:4px solid #0d6efd;
+padding-left:30px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+.timeline-item h4{
+color:#0d6efd;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.faq details{
+background:white;
+padding:15px;
+margin-bottom:10px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+button{
+padding:15px;
+border:none;
+background:#0d6efd;
+color:white;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+footer a{
+color:#ffd166;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo">InAmigos Foundation</div>
+
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#impact">Impact</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div>
+<h1>Together We Can Create Change</h1>
+
+<p>
+Empowering children, women, communities, animals and the environment through
+meaningful projects and sustainable social initiatives.
+</p>
+
+<a href="#contact" class="btn">Become A Volunteer</a>
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About InAmigos Foundation</h2>
+
+<div class="about">
+
+<div>
+<h3>Who We Are</h3>
+<br>
+<p>
+InAmigos Foundation is a social impact organization committed to creating
+positive change through education, women empowerment, environmental
+conservation, youth development, community service and animal welfare.
+</p>
+
+<br>
+
+<p>
+Our mission is to build a society where opportunities, education and
+support reach every individual regardless of their background.
+</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200">
+
+</div>
+
+</section>
+
+<section id="impact">
+
+<h2 class="section-title">Our Impact</h2>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2>30K+</h2>
+<p>Interns Trained</p>
+</div>
+
+<div class="stat-card">
+<h2>20K+</h2>
+<p>Trees Planted</p>
+</div>
+
+<div class="stat-card">
+<h2>900+</h2>
+<p>Women Empowered</p>
+</div>
+
+<div class="stat-card">
+<h2>50K+</h2>
+<p>Lives Impacted</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Our Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>📚 BachpanShala</h3>
+<p>Providing educational support and learning opportunities for children.</p>
+</div>
+
+<div class="project">
+<h3>👩 Udaan</h3>
+<p>Women empowerment through skills, awareness and leadership programs.</p>
+</div>
+
+<div class="project">
+<h3>🌱 Prakriti</h3>
+<p>Environmental conservation through tree plantation and awareness drives.</p>
+</div>
+
+<div class="project">
+<h3>🐾 Jeev</h3>
+<p>Supporting stray animals through rescue and welfare initiatives.</p>
+</div>
+
+<div class="project">
+<h3>🤝 Seva</h3>
+<p>Community service and support for underprivileged groups.</p>
+</div>
+
+<div class="project">
+<h3>💼 Vikas</h3>
+<p>Internships and career development opportunities for youth.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Journey & Achievements</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h4>2020</h4>
+<p>Foundation established with a vision for social transformation.</p>
+</div>
+
+<div class="timeline-item">
+<h4>2022</h4>
+<p>Expanded nationwide internship and volunteer programs.</p>
+</div>
+
+<div class="timeline-item">
+<h4>2024</h4>
+<p>Thousands of beneficiaries impacted through multiple initiatives.</p>
+</div>
+
+<div class="timeline-item">
+<h4>2026</h4>
+<p>Continuing to scale sustainable community development projects.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1000">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000">
+<img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=1000">
+<img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1000">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Volunteer Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+⭐ "Working with InAmigos gave me an opportunity to create real social impact."
+</div>
+
+<div class="testimonial">
+⭐ "An amazing platform for learning, leadership and community service."
+</div>
+
+<div class="testimonial">
+⭐ "One of the most rewarding volunteer experiences I have ever had."
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>How can I volunteer?</summary>
+<p>You can register through the volunteer form below.</p>
+</details>
+
+<details>
+<summary>Do students get internship opportunities?</summary>
+<p>Yes, InAmigos regularly provides internship opportunities.</p>
+</details>
+
+<details>
+<summary>Can I support environmental projects?</summary>
+<p>Absolutely. You can participate in plantation and awareness drives.</p>
+</details>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Join Our Mission</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="tel" placeholder="Phone Number">
+
+<textarea rows="5" placeholder="Why would you like to join us?"></textarea>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<h2>InAmigos Foundation</h2>
+
+<br>
+
+<p>Creating Opportunities • Empowering Communities • Inspiring Change</p>
+
+<br>
+
+<p>
+Website:
+<a href="#">www.inamigosfoundation.org</a>
+</p>
+
+<br>
+
+<p>© 2026 InAmigos Foundation. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
+```
