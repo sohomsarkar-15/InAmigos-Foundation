@@ -1,12 +1,12 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>InAmigos Foundation | Creating Impact Together</title>
+<title>InAmigos Foundation | Premium NGO Website</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
@@ -18,21 +18,35 @@ font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
+:root{
+--primary:#0d6efd;
+--secondary:#ffd166;
+--dark:#111827;
+--light:#f5f7fb;
+}
+
 body{
-background:#f5f7fb;
+background:var(--light);
 color:#333;
 overflow-x:hidden;
+}
+
+.dark-mode{
+background:#111;
+color:white;
 }
 
 .navbar{
 position:fixed;
 top:0;
+left:0;
 width:100%;
-background:rgba(13,110,253,0.95);
 padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+background:rgba(13,110,253,.95);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
@@ -49,14 +63,17 @@ gap:25px;
 }
 
 .nav-links a{
-text-decoration:none;
 color:white;
+text-decoration:none;
 font-weight:500;
-transition:.3s;
 }
 
-.nav-links a:hover{
-color:#ffd166;
+.theme-btn{
+background:white;
+border:none;
+padding:8px 12px;
+border-radius:10px;
+cursor:pointer;
 }
 
 .hero{
@@ -70,8 +87,8 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
 color:white;
+padding:20px;
 }
 
 .hero h1{
@@ -80,25 +97,19 @@ margin-bottom:20px;
 }
 
 .hero p{
-font-size:1.2rem;
 max-width:800px;
-margin:auto;
+font-size:1.2rem;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
+margin-top:25px;
 padding:14px 30px;
-background:#ffd166;
-color:#000;
-font-weight:600;
+background:var(--secondary);
+color:black;
 text-decoration:none;
+font-weight:600;
 border-radius:50px;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-4px);
 }
 
 section{
@@ -108,20 +119,8 @@ padding:90px 10%;
 .section-title{
 text-align:center;
 font-size:2.5rem;
-color:#0d6efd;
 margin-bottom:50px;
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-border-radius:15px;
+color:var(--primary);
 }
 
 .stats{
@@ -130,23 +129,29 @@ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
-.stat-card{
+.card{
 background:white;
 padding:30px;
 border-radius:15px;
-text-align:center;
 box-shadow:0 5px 20px rgba(0,0,0,.1);
+text-align:center;
+transition:.3s;
 }
 
-.stat-card h2{
-color:#0d6efd;
+.card:hover{
+transform:translateY(-8px);
+}
+
+.counter{
 font-size:2.5rem;
+font-weight:700;
+color:var(--primary);
 }
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
 .project{
@@ -154,16 +159,6 @@ background:white;
 padding:25px;
 border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,.1);
-transition:.4s;
-}
-
-.project:hover{
-transform:translateY(-10px);
-}
-
-.project h3{
-margin-bottom:10px;
-color:#0d6efd;
 }
 
 .gallery{
@@ -177,19 +172,29 @@ width:100%;
 height:250px;
 object-fit:cover;
 border-radius:12px;
+cursor:pointer;
 }
 
-.timeline{
-border-left:4px solid #0d6efd;
-padding-left:30px;
+.team{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.timeline-item{
-margin-bottom:30px;
+.member{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
 }
 
-.timeline-item h4{
-color:#0d6efd;
+.member img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
 }
 
 .testimonials{
@@ -205,20 +210,33 @@ border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,.1);
 }
 
+.progress{
+width:100%;
+height:25px;
+background:#ddd;
+border-radius:50px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:100%;
+width:75%;
+background:var(--primary);
+}
+
 .faq details{
 background:white;
 padding:15px;
 margin-bottom:10px;
 border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
 
 form{
-max-width:700px;
-margin:auto;
 display:flex;
 flex-direction:column;
 gap:15px;
+max-width:700px;
+margin:auto;
 }
 
 input,textarea{
@@ -229,34 +247,59 @@ border-radius:10px;
 
 button{
 padding:15px;
-border:none;
-background:#0d6efd;
+background:var(--primary);
 color:white;
+border:none;
 border-radius:10px;
-font-size:16px;
 cursor:pointer;
 }
 
 footer{
-background:#111827;
+background:var(--dark);
 color:white;
 text-align:center;
 padding:40px;
 }
 
-footer a{
-color:#ffd166;
+.social a{
+color:white;
+font-size:25px;
+margin:0 10px;
+}
+
+.whatsapp{
+position:fixed;
+left:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:30px;
 text-decoration:none;
+z-index:999;
+}
+
+.volunteer{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#ff9800;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+z-index:999;
 }
 
 @media(max-width:768px){
 
 .hero h1{
 font-size:2.5rem;
-}
-
-.about{
-grid-template-columns:1fr;
 }
 
 .nav-links{
@@ -267,10 +310,14 @@ display:none;
 
 </style>
 </head>
+
 <body>
 
 <nav class="navbar">
-<div class="logo">InAmigos Foundation</div>
+
+<div class="logo">
+InAmigos Foundation
+</div>
 
 <ul class="nav-links">
 <li><a href="#about">About</a></li>
@@ -279,47 +326,27 @@ display:none;
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+
+<button class="theme-btn" onclick="toggleTheme()">
+🌙
+</button>
+
 </nav>
 
 <section class="hero">
 
 <div>
-<h1>Together We Can Create Change</h1>
+
+<h1>Together We Create Impact</h1>
 
 <p>
-Empowering children, women, communities, animals and the environment through
-meaningful projects and sustainable social initiatives.
+Empowering communities through education, environment,
+animal welfare, women empowerment and youth development.
 </p>
 
-<a href="#contact" class="btn">Become A Volunteer</a>
-</div>
-
-</section>
-
-<section id="about">
-
-<h2 class="section-title">About InAmigos Foundation</h2>
-
-<div class="about">
-
-<div>
-<h3>Who We Are</h3>
-<br>
-<p>
-InAmigos Foundation is a social impact organization committed to creating
-positive change through education, women empowerment, environmental
-conservation, youth development, community service and animal welfare.
-</p>
-
-<br>
-
-<p>
-Our mission is to build a society where opportunities, education and
-support reach every individual regardless of their background.
-</p>
-</div>
-
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200">
+<a href="#contact" class="btn">
+Become A Volunteer
+</a>
 
 </div>
 
@@ -331,23 +358,23 @@ support reach every individual regardless of their background.
 
 <div class="stats">
 
-<div class="stat-card">
-<h2>30K+</h2>
+<div class="card">
+<div class="counter" data-target="30000">0</div>
 <p>Interns Trained</p>
 </div>
 
-<div class="stat-card">
-<h2>20K+</h2>
+<div class="card">
+<div class="counter" data-target="20000">0</div>
 <p>Trees Planted</p>
 </div>
 
-<div class="stat-card">
-<h2>900+</h2>
+<div class="card">
+<div class="counter" data-target="900">0</div>
 <p>Women Empowered</p>
 </div>
 
-<div class="stat-card">
-<h2>50K+</h2>
+<div class="card">
+<div class="counter" data-target="50000">0</div>
 <p>Lives Impacted</p>
 </div>
 
@@ -357,68 +384,38 @@ support reach every individual regardless of their background.
 
 <section id="projects">
 
-<h2 class="section-title">Our Projects</h2>
+<h2 class="section-title">Projects</h2>
 
 <div class="projects">
 
 <div class="project">
 <h3>📚 BachpanShala</h3>
-<p>Providing educational support and learning opportunities for children.</p>
+<p>Education for children.</p>
 </div>
 
 <div class="project">
 <h3>👩 Udaan</h3>
-<p>Women empowerment through skills, awareness and leadership programs.</p>
+<p>Women empowerment initiative.</p>
 </div>
 
 <div class="project">
 <h3>🌱 Prakriti</h3>
-<p>Environmental conservation through tree plantation and awareness drives.</p>
+<p>Environmental conservation.</p>
 </div>
 
 <div class="project">
 <h3>🐾 Jeev</h3>
-<p>Supporting stray animals through rescue and welfare initiatives.</p>
+<p>Animal welfare programs.</p>
 </div>
 
 <div class="project">
 <h3>🤝 Seva</h3>
-<p>Community service and support for underprivileged groups.</p>
+<p>Community service activities.</p>
 </div>
 
 <div class="project">
 <h3>💼 Vikas</h3>
-<p>Internships and career development opportunities for youth.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Journey & Achievements</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h4>2020</h4>
-<p>Foundation established with a vision for social transformation.</p>
-</div>
-
-<div class="timeline-item">
-<h4>2022</h4>
-<p>Expanded nationwide internship and volunteer programs.</p>
-</div>
-
-<div class="timeline-item">
-<h4>2024</h4>
-<p>Thousands of beneficiaries impacted through multiple initiatives.</p>
-</div>
-
-<div class="timeline-item">
-<h4>2026</h4>
-<p>Continuing to scale sustainable community development projects.</p>
+<p>Career development programs.</p>
 </div>
 
 </div>
@@ -431,10 +428,10 @@ support reach every individual regardless of their background.
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1000">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000">
-<img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=1000">
-<img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1000">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800">
+<img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=800">
+<img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800">
 
 </div>
 
@@ -442,20 +439,59 @@ support reach every individual regardless of their background.
 
 <section>
 
-<h2 class="section-title">Volunteer Testimonials</h2>
+<h2 class="section-title">Our Team</h2>
+
+<div class="team">
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/men/1.jpg">
+<h3>Founder</h3>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/women/2.jpg">
+<h3>Coordinator</h3>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/men/3.jpg">
+<h3>Volunteer Lead</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Donation Progress</h2>
+
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
+
+<br>
+
+<p>75% Campaign Goal Achieved</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Testimonials</h2>
 
 <div class="testimonials">
 
 <div class="testimonial">
-⭐ "Working with InAmigos gave me an opportunity to create real social impact."
+⭐ Amazing volunteering experience.
 </div>
 
 <div class="testimonial">
-⭐ "An amazing platform for learning, leadership and community service."
+⭐ Great opportunity for social impact.
 </div>
 
 <div class="testimonial">
-⭐ "One of the most rewarding volunteer experiences I have ever had."
+⭐ Wonderful learning platform.
 </div>
 
 </div>
@@ -464,23 +500,18 @@ support reach every individual regardless of their background.
 
 <section>
 
-<h2 class="section-title">Frequently Asked Questions</h2>
+<h2 class="section-title">FAQs</h2>
 
 <div class="faq">
 
 <details>
 <summary>How can I volunteer?</summary>
-<p>You can register through the volunteer form below.</p>
+<p>Fill the registration form below.</p>
 </details>
 
 <details>
-<summary>Do students get internship opportunities?</summary>
-<p>Yes, InAmigos regularly provides internship opportunities.</p>
-</details>
-
-<details>
-<summary>Can I support environmental projects?</summary>
-<p>Absolutely. You can participate in plantation and awareness drives.</p>
+<summary>Do you offer internships?</summary>
+<p>Yes, through Project Vikas.</p>
 </details>
 
 </div>
@@ -493,15 +524,15 @@ support reach every individual regardless of their background.
 
 <form>
 
-<input type="text" placeholder="Full Name">
+<input type="text" placeholder="Name">
 
-<input type="email" placeholder="Email Address">
+<input type="email" placeholder="Email">
 
-<input type="tel" placeholder="Phone Number">
+<textarea rows="5" placeholder="Message"></textarea>
 
-<textarea rows="5" placeholder="Why would you like to join us?"></textarea>
-
-<button type="submit">Submit Application</button>
+<button type="submit">
+Submit
+</button>
 
 </form>
 
@@ -513,21 +544,63 @@ support reach every individual regardless of their background.
 
 <br>
 
+<div class="social">
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+<br>
+
 <p>Creating Opportunities • Empowering Communities • Inspiring Change</p>
-
-<br>
-
-<p>
-Website:
-<a href="#">www.inamigosfoundation.org</a>
-</p>
-
-<br>
-
-<p>© 2026 InAmigos Foundation. All Rights Reserved.</p>
 
 </footer>
 
+<a href="#" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="#contact" class="volunteer">
+Volunteer Now
+</a>
+
+<script>
+
+function toggleTheme(){
+document.body.classList.toggle("dark-mode");
+}
+
+document.querySelectorAll('.counter').forEach(counter=>{
+
+const target=+counter.dataset.target;
+
+let count=0;
+
+const update=()=>{
+
+count+=Math.ceil(target/100);
+
+if(count<target){
+
+counter.innerText=count.toLocaleString();
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerText=target.toLocaleString()+"+";
+
+}
+
+};
+
+update();
+
+});
+
+</script>
+
 </body>
 </html>
-```
