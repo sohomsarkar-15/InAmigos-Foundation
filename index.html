@@ -3,262 +3,280 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>InAmigos Foundation | Premium NGO Website</title>
+<title>Elite Business Solutions</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Segoe UI',sans-serif;
 scroll-behavior:smooth;
 }
 
-:root{
---primary:#0d6efd;
---secondary:#ffd166;
---dark:#111827;
---light:#f5f7fb;
-}
-
 body{
-background:var(--light);
+background:#f4f7fc;
 color:#333;
-overflow-x:hidden;
 }
 
-.dark-mode{
-background:#111;
-color:white;
-}
-
-.navbar{
+header{
 position:fixed;
 top:0;
-left:0;
 width:100%;
+background:#0d1b2a;
 padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(13,110,253,.95);
-backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 .logo{
-color:white;
 font-size:28px;
-font-weight:700;
+font-weight:bold;
+color:white;
 }
 
-.nav-links{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-.nav-links a{
+nav a{
 color:white;
 text-decoration:none;
+margin-left:25px;
 font-weight:500;
 }
 
-.theme-btn{
-background:white;
-border:none;
-padding:8px 12px;
-border-radius:10px;
-cursor:pointer;
+nav a:hover{
+color:#00c6ff;
 }
 
 .hero{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600');
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1500&q=80');
 background-size:cover;
 background-position:center;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 color:white;
 padding:20px;
 }
 
-.hero h1{
-font-size:4rem;
+.hero-content h1{
+font-size:60px;
 margin-bottom:20px;
 }
 
-.hero p{
-max-width:800px;
-font-size:1.2rem;
+.hero-content p{
+font-size:22px;
+margin-bottom:30px;
 }
 
 .btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 30px;
-background:var(--secondary);
-color:black;
+padding:15px 35px;
+background:#00c6ff;
+color:white;
 text-decoration:none;
-font-weight:600;
-border-radius:50px;
+border-radius:30px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#0099cc;
 }
 
 section{
-padding:90px 10%;
+padding:90px 8%;
 }
 
-.section-title{
+.title{
 text-align:center;
-font-size:2.5rem;
+font-size:40px;
 margin-bottom:50px;
-color:var(--primary);
+color:#0d1b2a;
 }
 
-.stats{
+.about{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
 background:white;
 padding:30px;
 border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
 text-align:center;
-transition:.3s;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
-.counter{
-font-size:2.5rem;
-font-weight:700;
-color:var(--primary);
+.card i{
+font-size:50px;
+color:#00c6ff;
+margin-bottom:20px;
 }
 
-.projects{
+.stats{
+background:#0d1b2a;
+color:white;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+text-align:center;
 gap:20px;
 }
 
-.project{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
+.stat h2{
+font-size:50px;
+color:#00c6ff;
 }
 
-.gallery{
+.portfolio{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
-.gallery img{
+.portfolio img{
 width:100%;
-height:250px;
-object-fit:cover;
-border-radius:12px;
-cursor:pointer;
+border-radius:15px;
 }
 
 .team{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .member{
 background:white;
-padding:20px;
 text-align:center;
+padding:25px;
 border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
 .member img{
 width:120px;
 height:120px;
 border-radius:50%;
-object-fit:cover;
 margin-bottom:15px;
+}
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.plan{
+background:white;
+padding:35px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.plan h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.plan h2{
+color:#00c6ff;
+margin-bottom:20px;
+}
+
+.plan ul{
+list-style:none;
+margin-bottom:20px;
+}
+
+.plan ul li{
+padding:8px;
 }
 
 .testimonials{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .testimonial{
 background:white;
 padding:25px;
 border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
+box-shadow:0 10px 20px rgba(0,0,0,.1);
 }
 
-.progress{
-width:100%;
-height:25px;
-background:#ddd;
-border-radius:50px;
-overflow:hidden;
+.blogs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
-.progress-bar{
-height:100%;
-width:75%;
-background:var(--primary);
-}
-
-.faq details{
+.blog{
 background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.blog img{
+width:100%;
+}
+
+.blog-content{
+padding:20px;
+}
+
+.contact{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+form input,
+form textarea{
+width:100%;
 padding:15px;
-margin-bottom:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
 border-radius:10px;
 }
 
-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:700px;
-margin:auto;
-}
-
-input,textarea{
-padding:15px;
-border:1px solid #ddd;
-border-radius:10px;
-}
-
-button{
-padding:15px;
-background:var(--primary);
+form button{
+padding:15px 30px;
+background:#00c6ff;
 color:white;
 border:none;
-border-radius:10px;
+border-radius:30px;
 cursor:pointer;
 }
 
 footer{
-background:var(--dark);
+background:#0d1b2a;
 color:white;
-text-align:center;
 padding:40px;
+text-align:center;
 }
 
 .social a{
@@ -267,195 +285,205 @@ font-size:25px;
 margin:0 10px;
 }
 
-.whatsapp{
-position:fixed;
-left:20px;
-bottom:20px;
-width:60px;
-height:60px;
-background:#25D366;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-border-radius:50%;
-font-size:30px;
-text-decoration:none;
-z-index:999;
-}
-
-.volunteer{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#ff9800;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-z-index:999;
-}
-
 @media(max-width:768px){
 
-.hero h1{
-font-size:2.5rem;
+.hero-content h1{
+font-size:38px;
 }
 
-.nav-links{
+nav{
 display:none;
 }
 
 }
-
 </style>
 </head>
-
 <body>
 
-<nav class="navbar">
+<header>
+<div class="logo">EliteBiz</div>
 
-<div class="logo">
-InAmigos Foundation
-</div>
-
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#impact">Impact</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-<button class="theme-btn" onclick="toggleTheme()">
-🌙
-</button>
-
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#team">Team</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
 </nav>
+</header>
 
-<section class="hero">
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Transform Your Business Digitally</h1>
+<p>Premium Business Solutions For Modern Companies</p>
+<a href="#contact" class="btn">Get Started</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="title">About Us</h2>
+
+<div class="about">
 
 <div>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+</div>
 
-<h1>Together We Create Impact</h1>
-
+<div>
+<h2>Who We Are</h2>
+<br>
 <p>
-Empowering communities through education, environment,
-animal welfare, women empowerment and youth development.
+Elite Business Solutions helps startups and enterprises
+grow through digital transformation, AI automation,
+branding, consulting, and innovative technology solutions.
 </p>
+<br>
+<p>
+We provide high-quality services to help businesses
+increase productivity and revenue.
+</p>
+</div>
 
-<a href="#contact" class="btn">
-Become A Volunteer
-</a>
+</div>
+</section>
+
+<section id="services">
+<h2 class="title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<i class="fas fa-code"></i>
+<h3>Web Development</h3>
+<p>Professional websites and web applications.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-robot"></i>
+<h3>AI Solutions</h3>
+<p>AI-powered automation and business intelligence.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-line"></i>
+<h3>Digital Marketing</h3>
+<p>SEO, social media and online growth.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-briefcase"></i>
+<h3>Business Consulting</h3>
+<p>Strategic planning and market expansion.</p>
+</div>
+
+</div>
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>500+</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<h2>300+</h2>
+<p>Clients</p>
+</div>
+
+<div class="stat">
+<h2>25+</h2>
+<p>Countries</p>
+</div>
+
+<div class="stat">
+<h2>98%</h2>
+<p>Satisfaction</p>
+</div>
+
+</section>
+
+<section id="portfolio">
+<h2 class="title">Portfolio</h2>
+
+<div class="portfolio">
+
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
 
 </div>
 
 </section>
 
-<section id="impact">
-
-<h2 class="section-title">Our Impact</h2>
-
-<div class="stats">
-
-<div class="card">
-<div class="counter" data-target="30000">0</div>
-<p>Interns Trained</p>
-</div>
-
-<div class="card">
-<div class="counter" data-target="20000">0</div>
-<p>Trees Planted</p>
-</div>
-
-<div class="card">
-<div class="counter" data-target="900">0</div>
-<p>Women Empowered</p>
-</div>
-
-<div class="card">
-<div class="counter" data-target="50000">0</div>
-<p>Lives Impacted</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="projects">
-
-<div class="project">
-<h3>📚 BachpanShala</h3>
-<p>Education for children.</p>
-</div>
-
-<div class="project">
-<h3>👩 Udaan</h3>
-<p>Women empowerment initiative.</p>
-</div>
-
-<div class="project">
-<h3>🌱 Prakriti</h3>
-<p>Environmental conservation.</p>
-</div>
-
-<div class="project">
-<h3>🐾 Jeev</h3>
-<p>Animal welfare programs.</p>
-</div>
-
-<div class="project">
-<h3>🤝 Seva</h3>
-<p>Community service activities.</p>
-</div>
-
-<div class="project">
-<h3>💼 Vikas</h3>
-<p>Career development programs.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<h2 class="section-title">Gallery</h2>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800">
-<img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=800">
-<img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800">
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Our Team</h2>
+<section id="team">
+<h2 class="title">Our Team</h2>
 
 <div class="team">
 
 <div class="member">
-<img src="https://randomuser.me/api/portraits/men/1.jpg">
-<h3>Founder</h3>
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>John Smith</h3>
+<p>CEO</p>
 </div>
 
 <div class="member">
-<img src="https://randomuser.me/api/portraits/women/2.jpg">
-<h3>Coordinator</h3>
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h3>Sarah Lee</h3>
+<p>Marketing Head</p>
 </div>
 
 <div class="member">
-<img src="https://randomuser.me/api/portraits/men/3.jpg">
-<h3>Volunteer Lead</h3>
+<img src="https://randomuser.me/api/portraits/men/55.jpg">
+<h3>Michael Brown</h3>
+<p>Lead Developer</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="pricing">
+
+<h2 class="title">Pricing Plans</h2>
+
+<div class="pricing">
+
+<div class="plan">
+<h3>Starter</h3>
+<h2>$99</h2>
+<ul>
+<li>Website Design</li>
+<li>Email Support</li>
+<li>Basic SEO</li>
+</ul>
+<a href="#" class="btn">Choose</a>
+</div>
+
+<div class="plan">
+<h3>Professional</h3>
+<h2>$299</h2>
+<ul>
+<li>Custom Website</li>
+<li>Marketing Tools</li>
+<li>Priority Support</li>
+</ul>
+<a href="#" class="btn">Choose</a>
+</div>
+
+<div class="plan">
+<h3>Enterprise</h3>
+<h2>$999</h2>
+<ul>
+<li>AI Solutions</li>
+<li>Dedicated Team</li>
+<li>24/7 Support</li>
+</ul>
+<a href="#" class="btn">Choose</a>
 </div>
 
 </div>
@@ -464,34 +492,33 @@ Become A Volunteer
 
 <section>
 
-<h2 class="section-title">Donation Progress</h2>
-
-<div class="progress">
-<div class="progress-bar"></div>
-</div>
-
-<br>
-
-<p>75% Campaign Goal Achieved</p>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Testimonials</h2>
+<h2 class="title">Testimonials</h2>
 
 <div class="testimonials">
 
 <div class="testimonial">
-⭐ Amazing volunteering experience.
+<p>
+"Excellent service and outstanding support. Our sales
+increased significantly."
+</p>
+<br>
+<strong>- David</strong>
 </div>
 
 <div class="testimonial">
-⭐ Great opportunity for social impact.
+<p>
+"Professional team and modern solutions."
+</p>
+<br>
+<strong>- Emma</strong>
 </div>
 
 <div class="testimonial">
-⭐ Wonderful learning platform.
+<p>
+"The best digital transformation partner."
+</p>
+<br>
+<strong>- James</strong>
 </div>
 
 </div>
@@ -500,19 +527,33 @@ Become A Volunteer
 
 <section>
 
-<h2 class="section-title">FAQs</h2>
+<h2 class="title">Latest Blogs</h2>
 
-<div class="faq">
+<div class="blogs">
 
-<details>
-<summary>How can I volunteer?</summary>
-<p>Fill the registration form below.</p>
-</details>
+<div class="blog">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+<div class="blog-content">
+<h3>AI In Business</h3>
+<p>Discover how AI changes industries.</p>
+</div>
+</div>
 
-<details>
-<summary>Do you offer internships?</summary>
-<p>Yes, through Project Vikas.</p>
-</details>
+<div class="blog">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<div class="blog-content">
+<h3>Marketing Trends</h3>
+<p>Latest digital marketing insights.</p>
+</div>
+</div>
+
+<div class="blog">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+<div class="blog-content">
+<h3>Startup Growth</h3>
+<p>Strategies to scale your startup.</p>
+</div>
+</div>
 
 </div>
 
@@ -520,87 +561,76 @@ Become A Volunteer
 
 <section id="contact">
 
-<h2 class="section-title">Join Our Mission</h2>
+<h2 class="title">Contact Us</h2>
+
+<div class="contact">
+
+<div>
+
+<h3>Get In Touch</h3>
+<br>
+
+<p>Email: info@elitebiz.com</p>
+<br>
+
+<p>Phone: +91 9876543210</p>
+<br>
+
+<p>Address: Business Hub, India</p>
+
+</div>
 
 <form>
 
-<input type="text" placeholder="Name">
+<input type="text" placeholder="Full Name">
 
 <input type="email" placeholder="Email">
 
-<textarea rows="5" placeholder="Message"></textarea>
+<input type="text" placeholder="Subject">
+
+<textarea rows="6" placeholder="Message"></textarea>
 
 <button type="submit">
-Submit
+Send Message
 </button>
 
 </form>
+
+</div>
 
 </section>
 
 <footer>
 
-<h2>InAmigos Foundation</h2>
+<h2>Elite Business Solutions</h2>
+
+<br>
+
+<p>
+Helping businesses succeed through technology and innovation.
+</p>
 
 <br>
 
 <div class="social">
 
 <a href="#"><i class="fab fa-facebook"></i></a>
+
 <a href="#"><i class="fab fa-instagram"></i></a>
+
 <a href="#"><i class="fab fa-linkedin"></i></a>
-<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fab fa-twitter"></i></a>
 
 </div>
 
 <br>
 
-<p>Creating Opportunities • Empowering Communities • Inspiring Change</p>
+<p>
+© 2026 Elite Business Solutions. All Rights Reserved.
+</p>
 
 </footer>
-
-<a href="#" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="#contact" class="volunteer">
-Volunteer Now
-</a>
-
-<script>
-
-function toggleTheme(){
-document.body.classList.toggle("dark-mode");
-}
-
-document.querySelectorAll('.counter').forEach(counter=>{
-
-const target=+counter.dataset.target;
-
-let count=0;
-
-const update=()=>{
-
-count+=Math.ceil(target/100);
-
-if(count<target){
-
-counter.innerText=count.toLocaleString();
-requestAnimationFrame(update);
-
-}else{
-
-counter.innerText=target.toLocaleString()+"+";
-
-}
-
-};
-
-update();
-
-});
-
-</script>
 
 </body>
 </html>
